@@ -3,7 +3,7 @@
  */
 var app = angular.module('lck-app', ['ngRoute', 'ui.router']);
 
-app.config(['$urlRouterProvider', '$stateProvider', '$httpProvider',
+app.config(['$urlRouterProvider', '$stateProvider', '$locationProvider',
     function($urlRouterProvider, $stateProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/home');
 
