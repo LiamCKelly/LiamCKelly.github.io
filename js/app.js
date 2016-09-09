@@ -4,7 +4,7 @@
 var app = angular.module('lck-app', ['ngRoute', 'ui.router']);
 
 app.config(['$urlRouterProvider', '$stateProvider', '$httpProvider',
-    function($urlRouterProvider, $stateProvider, $httpProvider) {
+    function($urlRouterProvider, $stateProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/home');
 
         $stateProvider.state('base', {
@@ -25,6 +25,8 @@ app.config(['$urlRouterProvider', '$stateProvider', '$httpProvider',
         });
 
         //copy template later for further views
+
+        $locationProvider.html5Mode(true);
     }
 ]);
 
